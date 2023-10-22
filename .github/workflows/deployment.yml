@@ -14,3 +14,11 @@ jobs:
         uses: actions/checkout@v4
       - name: Build project
         run: dbx run build
+      - name: Install dbx
+        run: |
+          # Install dbx dependencies (if needed)
+          sudo apt-get update
+          sudo apt-get install dbx
+      - name: Set PATH for dbx
+        run: |
+          export PATH=$PATH:/path/to/dbx/directory
