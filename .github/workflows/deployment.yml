@@ -11,6 +11,8 @@ jobs:
   deploy:
     needs: test
     runs-on: ubuntu-latest
+    env:
+      DBX_PATH: ${{ secrets.DBX_PATH }}  # Replace with the actual secret name
     steps:
       - name: Get code
         uses: actions/checkout@v4
@@ -24,8 +26,8 @@ jobs:
       - name: Set PATH for dbx
         run: |
           # Add the directory containing dbx to the PATH
-          export PATH=$PATH:/path/to/dbx/directory
-          # Replace "/path/to/dbx/directory" with the actual path where "dbx" is located
+          export PATH=$PATH:$DBX_PATH
 
       - name: Build project
         run: dbx run build
+
