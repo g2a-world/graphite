@@ -12,7 +12,7 @@ jobs:
     needs: test
     runs-on: ubuntu-latest
     env:
-      DBX_PATH: ${{ secrets.GITHUB_TOKEN }}  # Replace with the actual secret name
+      DBX_PATH: graphite/Temp_Folder@main  # Replace with the actual secret name
     steps:
       - name: Get code
         uses: actions/checkout@v4
