@@ -21,4 +21,4 @@ jobs:
           sudo apt-get install dbx
       - name: Set PATH for dbx
         run: |
-          export PATH=$PATH:/path/to/dbx/directory
+          export PATH=$PATH:/Repos/girma@nubires.onmicrosoft.com/graphite/notebooks/ingest_circute_fiel
